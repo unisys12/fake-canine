@@ -9,7 +9,7 @@ Extends FakerPHP to add support for adding fake Canines to a project
 
 ## Installation
 
-You can install the package via composer:
+You can install the package via composer: _not quite_
 
 ```bash
 composer require unisys12/fake-canine
@@ -17,8 +17,24 @@ composer require unisys12/fake-canine
 
 ## Usage
 
+I'm not how I like the current API, but for now... It will work. Gotta do more research.
+
 ```php
-// Usage description here
+<?php
+
+namespace Vendor\YourProject;
+
+use Unisys12\FakeCanine\FakeCanineProvider;
+
+class CanineModelFactory
+{
+    $fakeCanine = new FakeCanineProvider();
+
+    return [
+        'name' => $fakeCanine->canineNameMale(),
+        'breed' => $fakeCanine->canineBreed()
+    ]
+}
 ```
 
 ### Testing
