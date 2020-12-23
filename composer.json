@@ -1,0 +1,42 @@
+{
+    "name": "unisys12/fake-canine",
+    "description": "Extend FakerPHP to add support for adding fake Canines to a project",
+    "keywords": [
+        "unisys12",
+        "fake-canine"
+    ],
+    "homepage": "https://github.com/unisys12/fake-canine",
+    "license": "MIT",
+    "type": "library",
+    "authors": [
+        {
+            "name": "Phillip Jackson",
+            "email": "unisys12@gmail.com",
+            "role": "Developer"
+        }
+    ],
+    "require": {
+        "php": "^7.1"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^7.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Unisys12\\FakeCanine\\": "src"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Unisys12\\FakeCanine\\Tests\\": "tests"
+        }
+    },
+    "scripts": {
+        "test": "vendor/bin/phpunit",
+        "test-coverage": "vendor/bin/phpunit --coverage-html coverage"
+
+    },
+    "config": {
+        "sort-packages": true
+    }
+}
