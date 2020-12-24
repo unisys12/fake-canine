@@ -7,17 +7,23 @@ class FakeCanineGenerator
 {
     public function nameMale()
     {
-        return array_rand($this->lists['names']['male']);
+        $name = array_rand($this->lists['names']['male']);
+
+        return $this->lists['names']['male'][$name];
     }
 
     public function nameFemale()
     {
-        return array_rand($this->lists['names']['female']);
+        $name = array_rand($this->lists['names']['female']);
+
+        return $this->lists['names']['female'][$name];
     }
 
     public function breed()
     {
-        return array_rand($this->lists['breeds']);
+        $breed = array_rand($this->lists['breeds']);
+
+        return $this->lists['breeds'][$breed];
     }
 
     private $lists = [
