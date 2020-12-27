@@ -53,7 +53,8 @@ class FakeCanineGenerator
         ],
         'breeds' => [
             'Retriever (Labrador)',
-            'German Shepherd',ver (Golden)',
+            'German Shepherd',
+            'Retriever (Golden)',
             'French Bulldog',
             'Bulldog',
             'Poodle',
