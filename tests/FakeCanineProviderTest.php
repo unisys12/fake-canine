@@ -9,7 +9,7 @@ use Unisys12\FakeCanine\FakeCanineProvider;
 class FakeCanineProviderTest extends TestCase
 {
     /** @test */
-    public function generate_male_name()
+    public function generate_male_name() : void
     {
         $faker = new Generator();
         $canineProvider = new FakeCanineProvider($faker);
@@ -18,7 +18,7 @@ class FakeCanineProviderTest extends TestCase
     }
 
     /** @test */
-    public function generate_female_name()
+    public function generate_female_name() : void
     {
         $faker = new Generator();
         $canineProvider = new FakeCanineProvider($faker);
@@ -27,7 +27,7 @@ class FakeCanineProviderTest extends TestCase
     }
 
     /** @test */
-    public function generate_breed()
+    public function generate_breed() : void
     {
         $faker = new Generator();
         $canineProvider = new FakeCanineProvider($faker);

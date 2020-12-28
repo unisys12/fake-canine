@@ -54,7 +54,7 @@ class FakeCanineProvider extends Base
      *
      * @return string
      */
-    public function canineBreed()
+    public function canineBreed(): string
     {
         $gen = new FakeCanineGenerator();
         $breed = $gen->breed();
