@@ -67,6 +67,12 @@ class CanineFactory extends Factory
 composer test
 ```
 
+On Windows, you should add a `-w` tag to the script cmds located in the `composer.json`.
+
+```bash
+composer test-w
+```
+
 ### Changelog
 
 Please see [CHANGELOG](CHANGELOG.md) for more information what has changed recently.
