@@ -25,15 +25,39 @@ I'm not how I like the current API, but for now... It will work. Gotta do more r
 namespace Vendor\YourProject;
 
 use Unisys12\FakeCanine\FakeCanineProvider;
+use Faker\Generator;
 
 class CanineModelFactory
 {
-    $fakeCanine = new FakeCanineProvider();
+    $fakeCanine = new FakeCanineProvider((new Generator));
 
     return [
         'name' => $fakeCanine->canineNameMale(),
         'breed' => $fakeCanine->canineBreed()
     ]
+}
+```
+
+In an Laravel project, you would simply pass the `faker` property to the `FakeCanineProvider` like so,
+```php
+namespace Database\Factories;
+
+use App\Models\Canine;
+use Unisys12\FakeCanine\FakeCanineProvider;
+
+class CanineFactory extends Factory
+{
+    protected $model = Canine::class;
+
+    public function definition()
+    {
+        $provider = new FakeCanineProvider($this->faker);
+
+        return [
+            'name' => $provider->canineNameFemale(),
+            'breed' => $provider->canineBreed()
+        ]
+    }
 }
 ```
 
