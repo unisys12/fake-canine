@@ -1,9 +1,8 @@
 # WIP: Fake-Canine
 
-<!-- [![Latest Version on Packagist](https://img.shields.io/packagist/v/unisys12/fake-canine.svg?style=flat-square)](https://packagist.org/packages/unisys12/fake-canine)
+[![Latest Version on Packagist](https://img.shields.io/packagist/v/unisys12/fake-canine.svg?style=flat-square)](https://packagist.org/packages/unisys12/fake-canine)
 [![Build Status](https://img.shields.io/travis/unisys12/fake-canine/master.svg?style=flat-square)](https://travis-ci.org/unisys12/fake-canine)
-[![Quality Score](https://img.shields.io/scrutinizer/g/unisys12/fake-canine.svg?style=flat-square)](https://scrutinizer-ci.com/g/unisys12/fake-canine)
-[![Total Downloads](https://img.shields.io/packagist/dt/unisys12/fake-canine.svg?style=flat-square)](https://packagist.org/packages/unisys12/fake-canine) -->
+[![Total Downloads](https://img.shields.io/packagist/dt/unisys12/fake-canine.svg?style=flat-square)](https://packagist.org/packages/unisys12/fake-canine)
 
 Extends FakerPHP to add support for adding fake Canines to a project
 
