@@ -17,7 +17,7 @@ composer require unisys12/fake-canine
 
 ## Usage
 
-I'm not how I like the current API, but for now... It will work. Gotta do more research.
+I'm not sure I like the current API, but for now... It will work. Gotta do more research!
 
 ```php
 <?php
@@ -38,7 +38,8 @@ class CanineModelFactory
 }
 ```
 
-In an Laravel project, you would simply pass the `faker` property to the `FakeCanineProvider` like so,
+In a Laravel project, you would simply pass the `faker` property to the `FakeCanineProvider` like so,
+
 ```php
 namespace Database\Factories;
 
@@ -67,7 +68,7 @@ class CanineFactory extends Factory
 composer test
 ```
 
-On Windows, you should add a `-w` tag to the script cmds located in the `composer.json`.
+On Windows, you should add a `-w` tag _(without a space)_ to the script cmds located in the `composer.json`.
 
 ```bash
 composer test-w
@@ -87,13 +88,9 @@ If you discover any security related issues, please email unisys12@gmail.com ins
 
 ## Credits
 
--   [Phillip Jackson](https://github.com/unisys12)
--   [All Contributors](../../contributors)
+- [Phillip Jackson](https://github.com/unisys12)
+- [All Contributors](../../contributors)
 
 ## License
 
 The MIT License (MIT). Please see [License File](LICENSE.md) for more information.
-
-## PHP Package Boilerplate
-
-This package was generated using the [PHP Package Boilerplate](https://laravelpackageboilerplate.com).
