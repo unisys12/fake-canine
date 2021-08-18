@@ -8,7 +8,7 @@ Extends FakerPHP to add support for adding fake Canines to a project
 
 ## Installation
 
-You can install the package via composer: _not quite_
+You can install the package via composer:
 
 ```bash
 composer require unisys12/fake-canine
@@ -16,7 +16,7 @@ composer require unisys12/fake-canine
 
 ## Usage
 
-I'm not sure I like the current API, but for now... It will work. Gotta do more research!
+I'm not sure I like the current API, but for now... It will work. Got to do more research!
 
 ```php
 <?php
