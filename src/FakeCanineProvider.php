@@ -3,48 +3,49 @@
 namespace Unisys12\FakeCanine;
 
 use Faker\Provider\Base;
+use Unisys12\FakeCanine\FakeCanineNameGenerator;
+use Unisys12\FakeCanine\FakeCanineBreedGenerator;
 
 /**
  * Fake Canine Provider
  *
  * This class extends the Base FakerPHP class
  *
- * Creates a generator instance that returns a random string
- * of a defined need. Male, female or breed name.
- *
+ * @return string
  * @author Phillip Jackson (unisys12)
  *
  */
 class FakeCanineProvider extends Base
 {
     /**
-     * canineNameMale()
+     * gender
      *
-     * Returns a string that contains a random male name
+     * @var string
      *
-     * @return string
+     * Only populated after calling name() method
      */
-    public function canineNameMale(): string
-    {
-        $gen = new FakeCanineGenerator();
-        $name = $gen->nameMale();
+    public $gender = null;
 
-        return $name;
+    protected function gender()
+    {
+        $gender = array_rand(['male' => 0, 'female' => 1]);
+        return $gender;
     }
 
     /**
-     * canineNameFemale()
+     * name()
      *
-     * Returns a string that contains a random female name
+     * Returns a canine name, as a string, based on the gender passed.
      *
      * @return string
      */
-    public function canineNameFemale(): string
+    public function name()
     {
-        $gen = new FakeCanineGenerator();
-        $name = $gen->nameFemale();
+        $this->gender = $this->gender();
 
-        return $name;
+        $gen = new FakeCanineNameGenerator($this->gender);
+
+        return $gen->name();
     }
 
     /**
@@ -54,10 +55,10 @@ class FakeCanineProvider extends Base
      *
      * @return string
      */
-    public function canineBreed(): string
+    public function breed(): string
     {
-        $gen = new FakeCanineGenerator();
-        $breed = $gen->breed();
+        $gen = new FakeCanineBreedGenerator();
+        $breed = $gen->canineBreed();
 
         return $breed;
     }
