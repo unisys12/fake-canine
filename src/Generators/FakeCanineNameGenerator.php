@@ -1,6 +1,6 @@
 <?php
 
-namespace Unisys12\FakeCanine;
+namespace Unisys12\FakeCanine\Generators;
 
 /**
  * Fake Canine Name Generator

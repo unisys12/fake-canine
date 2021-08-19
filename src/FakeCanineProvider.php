@@ -3,8 +3,8 @@
 namespace Unisys12\FakeCanine;
 
 use Faker\Provider\Base;
-use Unisys12\FakeCanine\FakeCanineNameGenerator;
-use Unisys12\FakeCanine\FakeCanineBreedGenerator;
+use Unisys12\FakeCanine\Generators\FakeCanineNameGenerator;
+use Unisys12\FakeCanine\Generators\FakeCanineBreedGenerator;
 
 /**
  * Fake Canine Provider
