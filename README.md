@@ -16,8 +16,6 @@ composer require unisys12/fake-canine
 
 ## Usage
 
-I'm not sure I like the current API, but for now... It will work. Got to do more research!
-
 ```php
 <?php
 
@@ -31,8 +29,9 @@ class CanineModelFactory
     $fakeCanine = new FakeCanineProvider((new Generator));
 
     return [
-        'name' => $fakeCanine->canineNameMale(),
-        'breed' => $fakeCanine->canineBreed()
+        'name' => $fakeCanine->name(),
+        'breed' => $fakeCanine->breed(),
+        'gender' => $fakeCanine->gender
     ]
 }
 ```
@@ -51,15 +50,22 @@ class CanineFactory extends Factory
 
     public function definition()
     {
-        $provider = new FakeCanineProvider($this->faker);
+        $fakeCanine = new FakeCanineProvider($this->faker);
 
         return [
-            'name' => $provider->canineNameFemale(),
-            'breed' => $provider->canineBreed()
-        ]
+            'name' => $fakeCanine->name(),
+            'breed' => $fakeCanine->breed(),
+            'gender' => $fakeCanine->gender
+         ]
     }
 }
 ```
+
+## Gender
+
+`gender` is a property of `Unisys12\FakeCanine\FakeCanineProvider` and is set to `null` at initialization of the class. To generate a random name, a gender must be selected first. Once this is done, by calling the `name()` method, the gender selected is stored in a public property that is assessable to the class.
+
+_The above behavior might change in the future._
 
 ### Testing
 
